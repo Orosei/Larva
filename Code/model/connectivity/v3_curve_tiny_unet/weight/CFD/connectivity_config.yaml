@@ -1,0 +1,105 @@
+# preprocess/config/v3/connectivity_config.yaml
+# v3 Patch 图像拓扑连通性 + label 分割双头训练配置
+
+paths:
+  # 数据集根目录；切换数据集时通常只需要改这里
+  root: "data/dataset/CFD_v3_refine_2"
+
+  # 以下路径均相对于 root 或 split 目录
+  train_data: "train"
+  test_data: "test"
+  flag_json: "flag.json"
+  image_dir: "image"
+  mask_dir: "mask"
+  # 兼容旧单分割头；新级联模型中作为 patch-label 监督
+  seg_target_dir: "label"
+  # 新级联模型的 label-curve 监督，数据生成脚本保存到 bridge/
+  label_curve_target_dir: "bridge"
+
+  # 模型权重保存目录；训练脚本会自动创建该目录
+  checkpoint_dir: "preprocess/checkpoints/connectivity/v3"
+  best_model_name: "best_connectivity_predictor_v3.pth"
+
+wandb:
+  project: "Larva_2_preprocess"
+
+model:
+  # type 可选: tiny_unet / cascaded_tiny_unet / label_curve_classified_tiny_unet / curve_bottleneck_tiny_unet / curve_tiny_unet / resnet18_multitask
+  type: "curve_tiny_unet"
+  # 输入张量形状为 (B, 5, H, W): image(3) + data.cc_input 选择的两个 mask 通道
+  in_channels: "auto"
+  activation: "silu"
+  max_patch_size: 48
+  # tiny_unet 上采样方式，可选: conv_transpose / bilinear
+  upsample_mode: "conv_transpose"
+  backbone: "resnet18"
+  dropout: 0.3
+  pretrained: false
+  # 分割头输出通道；二值 label / curve 分割保持 1
+  seg_out_channels: 1
+  patch_label_out_channels: 1
+  label_curve_out_channels: 1
+  curve_head_channels: 16
+  # label_curve_classified_tiny_unet 使用；分类头从 label_curve_logits 后接 3x3 conv + stride=2 pooling 降维
+  curve_classifier_channels: [16, 32, 64]
+  curve_classifier_hidden_dim: 32
+  # curve_bottleneck_tiny_unet 使用；分类头同时使用 label-curve raw logits 与 bottleneck 特征
+  curve_bottleneck_classifier_channels: [16, 32, 64]
+  curve_bottleneck_classifier_hidden_dim: 32
+  # curve_tiny_unet 使用；去掉 patch-label 分支，仅保留完整 5 通道 curve 分支
+  curve_tiny_unet_logits_fusion_channels: 16
+  curve_tiny_unet_classifier_hidden_dim: 32
+  seg_head_channels: 256
+
+data:
+  # transform_mode 只控制使用训练变换还是测试变换，不参与路径拼接
+  train_transform_mode: "train"
+  test_transform_mode: "test"
+  batch_size: 32
+  num_workers: 4
+  pin_memory: true
+  train_weighted_sampler: true
+  require_seg_target: true
+  # auto 时由 model.type 决定；cascaded_tiny_unet 会要求 bridge/ label-curve 监督存在
+  require_label_curve_target: auto
+  # 可选: target_cc -> image+center_cc+target_cc
+  #      target_curve -> image+center_curve+target_curve
+  cc_input: "target_curve"
+
+train:
+  epochs: 200
+  test_every: 5
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  device: "cuda"
+  # 可选: test/f1, test/overall_acc, test/seg_dice, test/seg_iou；越大越好
+  best_metric: "test/f1"
+
+loss:
+  classification:
+    # type 可选 bce / focal
+    type: "focal"
+    weight: 1.0
+    # null 表示禁用内部 pos_weight；可改为 "auto" 或具体数值
+    pos_weight: null
+    focal_alpha: null
+    focal_gamma: 2.0
+  segmentation:
+    # 所有分割头共用此配置；单头需要不同时，可在对应头下覆盖同名字段
+    # type 可选 bce / dice / bce_dice
+    type: "bce_dice"
+    weight: 1.0
+    pos_weight: null
+    bce_weight: 1.0
+    dice_weight: 1.0
+    smooth: 1.0
+  patch_label:
+    # 三头模型的 patch-label 分割头；默认继承 segmentation，仅覆盖权重
+    weight: 1.0
+  label_curve:
+    # 三头模型的 label-curve 分割头；默认继承 segmentation，仅覆盖权重
+    weight: 1.0
+
+scheduler:
+  # CosineAnnealingLR 的最低学习率
+  eta_min: 0.000001

@@ -1,0 +1,60 @@
+Epoch: 1	Test classwise_acc: 89.70%	Test overall_acc: 44.20%	Test overall_acc_max: 0.00%
+Test overall_plus_acc: 58.79%	Test overall_plus_acc_max: 0.00%	loss: 0.1516	angle_gap:11.6304
+Epoch: 2	Test classwise_acc: 94.45%	Test overall_acc: 65.31%	Test overall_acc_max: 44.20%
+Test overall_plus_acc: 77.81%	Test overall_plus_acc_max: 58.79%	loss: 0.0968	angle_gap:6.5489
+Epoch: 3	Test classwise_acc: 94.42%	Test overall_acc: 65.28%	Test overall_acc_max: 65.31%
+Test overall_plus_acc: 77.69%	Test overall_plus_acc_max: 77.81%	loss: 0.0900	angle_gap:6.8716
+Epoch: 4	Test classwise_acc: 94.87%	Test overall_acc: 67.36%	Test overall_acc_max: 65.31%
+Test overall_plus_acc: 79.48%	Test overall_plus_acc_max: 77.81%	loss: 0.0840	angle_gap:5.5265
+Epoch: 5	Test classwise_acc: 94.68%	Test overall_acc: 66.61%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 78.71%	Test overall_plus_acc_max: 79.48%	loss: 0.0859	angle_gap:5.7099
+Epoch: 6	Test classwise_acc: 94.74%	Test overall_acc: 66.73%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 78.94%	Test overall_plus_acc_max: 79.48%	loss: 0.0863	angle_gap:5.6284
+Epoch: 7	Test classwise_acc: 94.70%	Test overall_acc: 66.00%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 78.79%	Test overall_plus_acc_max: 79.48%	loss: 0.0862	angle_gap:5.7846
+Epoch: 8	Test classwise_acc: 94.72%	Test overall_acc: 66.49%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 78.88%	Test overall_plus_acc_max: 79.48%	loss: 0.0863	angle_gap:5.8933
+Epoch: 9	Test classwise_acc: 94.53%	Test overall_acc: 65.31%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 78.11%	Test overall_plus_acc_max: 79.48%	loss: 0.0872	angle_gap:5.9273
+Epoch: 10	Test classwise_acc: 94.69%	Test overall_acc: 65.58%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 78.77%	Test overall_plus_acc_max: 79.48%	loss: 0.0865	angle_gap:5.8798
+Epoch: 11	Test classwise_acc: 94.66%	Test overall_acc: 65.52%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 78.62%	Test overall_plus_acc_max: 79.48%	loss: 0.0862	angle_gap:6.1243
+Epoch: 12	Test classwise_acc: 94.59%	Test overall_acc: 65.07%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 78.37%	Test overall_plus_acc_max: 79.48%	loss: 0.0896	angle_gap:5.7473
+Epoch: 13	Test classwise_acc: 94.40%	Test overall_acc: 63.98%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 77.58%	Test overall_plus_acc_max: 79.48%	loss: 0.0921	angle_gap:6.0258
+Epoch: 14	Test classwise_acc: 94.28%	Test overall_acc: 63.04%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 77.13%	Test overall_plus_acc_max: 79.48%	loss: 0.0949	angle_gap:6.5455
+Epoch: 15	Test classwise_acc: 94.22%	Test overall_acc: 62.80%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 76.87%	Test overall_plus_acc_max: 79.48%	loss: 0.0997	angle_gap:6.6746
+Epoch: 16	Test classwise_acc: 94.23%	Test overall_acc: 63.01%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 76.93%	Test overall_plus_acc_max: 79.48%	loss: 0.1046	angle_gap:6.5319
+Epoch: 17	Test classwise_acc: 94.54%	Test overall_acc: 64.10%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 78.16%	Test overall_plus_acc_max: 79.48%	loss: 0.1060	angle_gap:6.2432
+Epoch: 18	Test classwise_acc: 93.83%	Test overall_acc: 59.99%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 75.33%	Test overall_plus_acc_max: 79.48%	loss: 0.1126	angle_gap:7.2079
+Epoch: 19	Test classwise_acc: 94.31%	Test overall_acc: 63.10%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 77.25%	Test overall_plus_acc_max: 79.48%	loss: 0.1124	angle_gap:6.6135
+Epoch: 20	Test classwise_acc: 94.14%	Test overall_acc: 62.14%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 76.55%	Test overall_plus_acc_max: 79.48%	loss: 0.1239	angle_gap:6.8139
+Epoch: 21	Test classwise_acc: 94.18%	Test overall_acc: 61.53%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 76.74%	Test overall_plus_acc_max: 79.48%	loss: 0.1224	angle_gap:6.9293
+Epoch: 22	Test classwise_acc: 94.16%	Test overall_acc: 62.08%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 76.63%	Test overall_plus_acc_max: 79.48%	loss: 0.1355	angle_gap:6.4062
+Epoch: 23	Test classwise_acc: 94.02%	Test overall_acc: 60.81%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 76.07%	Test overall_plus_acc_max: 79.48%	loss: 0.1356	angle_gap:7.1705
+Epoch: 24	Test classwise_acc: 93.79%	Test overall_acc: 59.12%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 75.17%	Test overall_plus_acc_max: 79.48%	loss: 0.1438	angle_gap:7.3471
+Epoch: 25	Test classwise_acc: 94.01%	Test overall_acc: 60.66%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 76.04%	Test overall_plus_acc_max: 79.48%	loss: 0.1494	angle_gap:6.7120
+Epoch: 26	Test classwise_acc: 94.39%	Test overall_acc: 62.53%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 77.55%	Test overall_plus_acc_max: 79.48%	loss: 0.1552	angle_gap:6.1957
+Epoch: 27	Test classwise_acc: 93.91%	Test overall_acc: 60.33%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 75.63%	Test overall_plus_acc_max: 79.48%	loss: 0.1708	angle_gap:7.1060
+Epoch: 28	Test classwise_acc: 94.21%	Test overall_acc: 62.32%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 76.86%	Test overall_plus_acc_max: 79.48%	loss: 0.1696	angle_gap:6.5897
+Epoch: 29	Test classwise_acc: 94.10%	Test overall_acc: 61.53%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 76.39%	Test overall_plus_acc_max: 79.48%	loss: 0.1683	angle_gap:6.8478
+Epoch: 30	Test classwise_acc: 93.64%	Test overall_acc: 58.45%	Test overall_acc_max: 67.36%
+Test overall_plus_acc: 74.55%	Test overall_plus_acc_max: 79.48%	loss: 0.1821	angle_gap:7.2928

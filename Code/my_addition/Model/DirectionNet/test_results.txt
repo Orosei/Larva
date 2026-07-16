@@ -1,0 +1,99 @@
+
+===== 1 :
+f1 : 0.5912
+narrow_f1 : 0.5365
+wide_f1 : 0.6459
+vessel_f1 : 0.7034
+loss : 0.4774
+dirloss : 0.1645
+vesselloss : 0.0297
+
+===== 2 :
+f1 : 0.6544
+narrow_f1 : 0.6000
+wide_f1 : 0.7089
+vessel_f1 : 0.7085
+loss : 0.4168
+dirloss : 0.1449
+vesselloss : 0.0254
+
+===== 3 :
+f1 : 0.6540
+narrow_f1 : 0.6030
+wide_f1 : 0.7050
+vessel_f1 : 0.7208
+loss : 0.3980
+dirloss : 0.1430
+vesselloss : 0.0224
+
+===== 4 :
+f1 : 0.6638
+narrow_f1 : 0.6164
+wide_f1 : 0.7112
+vessel_f1 : 0.7351
+loss : 0.3854
+dirloss : 0.1413
+vesselloss : 0.0205
+
+===== 5 :
+f1 : 0.6743
+narrow_f1 : 0.6233
+wide_f1 : 0.7253
+vessel_f1 : 0.7389
+loss : 0.3713
+dirloss : 0.1375
+vesselloss : 0.0192
+
+===== 6 :
+f1 : 0.6622
+narrow_f1 : 0.6101
+wide_f1 : 0.7144
+vessel_f1 : 0.7402
+loss : 0.3780
+dirloss : 0.1412
+vesselloss : 0.0191
+
+===== 7 :
+f1 : 0.6731
+narrow_f1 : 0.6191
+wide_f1 : 0.7270
+vessel_f1 : 0.7421
+loss : 0.3658
+dirloss : 0.1370
+vesselloss : 0.0184
+
+===== 8 :
+f1 : 0.6600
+narrow_f1 : 0.6172
+wide_f1 : 0.7027
+vessel_f1 : 0.7423
+loss : 0.3773
+dirloss : 0.1432
+vesselloss : 0.0182
+
+===== 9 :
+f1 : 0.6631
+narrow_f1 : 0.6164
+wide_f1 : 0.7098
+vessel_f1 : 0.7480
+loss : 0.3792
+dirloss : 0.1457
+vesselloss : 0.0176
+
+===== 10 :
+f1 : 0.6612
+narrow_f1 : 0.6066
+wide_f1 : 0.7159
+vessel_f1 : 0.7321
+loss : 0.3825
+dirloss : 0.1467
+vesselloss : 0.0178
+
+===== 11 :
+f1 : 0.6544
+narrow_f1 : 0.5995
+wide_f1 : 0.7093
+vessel_f1 : 0.7476
+loss : 0.4155
+dirloss : 0.1637
+vesselloss : 0.0176

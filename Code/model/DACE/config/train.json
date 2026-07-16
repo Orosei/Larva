@@ -1,0 +1,36 @@
+{
+  "NAME": "DACE",
+  "DATA_NAME": "inhouse",
+  "DATA_ROOT": "../data_and_weight/data/inhouse/train",
+  "OUTPUT_DIR": "../output",
+  "WEIGHTS_FILE_NAME": "../data_and_weight/model_weights/dace_model.pth",
+  "DEVICE": "cuda",
+
+  "IMAGE_IDX":-1,  
+  "POINTS_PER_IMAGE": 30,
+  "ENDPOINT_ONLY": false,
+  "TRAIN_MAX_LEN": 400,
+
+  "NUM_DIFFUSION_STEPS": 1000,
+  "INFERENCE_SEED": 42,
+  "INFERENCE_STEPS": 15,
+  "PRED_STEPS": 16,
+  "PATCH_SIZE": 64,
+
+  "PT_SHIFT": 4,
+  "USE_WIDTH": true,
+  "USE_OVERLAY": true,
+  "OVERLAY_COLOR": 0.4,
+  "OVERLAY_THICKNESS": 2,
+
+  "_RESUME_EPOCH_note": "-1=off, 0=auto-latest, >0=specific epoch",
+  "RESUME_EPOCH": -1,
+  "EPOCHS": 50,
+  "SAVE_EPOCH": 10,
+  "BATCH_SIZE": 128,
+
+  "LR": 0.0002,
+  "WEIGHT_DECAY": 1e-5,
+  "LAMBDA_INSIDE": 1.0,
+  "HM_LOSS_WEIGHT": 50.0
+}

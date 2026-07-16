@@ -1,0 +1,21 @@
+{
+  "input_root": "Dataset/DRIVE/test",
+  "input_subdirs": [
+    "images",
+    "labels",
+    "coarse_seg/unet/vseg",
+    "coarse_prob/unet/vseg"
+  ],
+  "color_flags": [
+    true,
+    false,
+    false,
+    false
+  ],
+  "img_num": -1,
+  "output_root": "Output/DRIVE/test/unet/vseg",
+  "output_subdirs": [
+    "refine_seg",
+    "refine_seg_color"
+  ]
+}

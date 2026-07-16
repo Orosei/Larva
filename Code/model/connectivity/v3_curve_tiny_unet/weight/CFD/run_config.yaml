@@ -1,0 +1,76 @@
+data:
+  batch_size: 32
+  cc_input: target_curve
+  num_workers: 4
+  pin_memory: true
+  require_label_curve_target: auto
+  require_seg_target: true
+  test_transform_mode: test
+  train_transform_mode: train
+  train_weighted_sampler: true
+loss:
+  classification:
+    focal_alpha: null
+    focal_gamma: 2.0
+    pos_weight: null
+    type: focal
+    weight: 1.0
+  label_curve:
+    weight: 1.0
+  patch_label:
+    weight: 1.0
+  segmentation:
+    bce_weight: 1.0
+    dice_weight: 1.0
+    pos_weight: null
+    smooth: 1.0
+    type: bce_dice
+    weight: 1.0
+model:
+  activation: silu
+  backbone: resnet18
+  curve_bottleneck_classifier_channels:
+  - 16
+  - 32
+  - 64
+  curve_bottleneck_classifier_hidden_dim: 32
+  curve_classifier_channels:
+  - 16
+  - 32
+  - 64
+  curve_classifier_hidden_dim: 32
+  curve_head_channels: 16
+  curve_tiny_unet_classifier_hidden_dim: 32
+  curve_tiny_unet_logits_fusion_channels: 16
+  dropout: 0.3
+  in_channels: 5
+  label_curve_out_channels: 1
+  max_patch_size: 48
+  patch_label_out_channels: 1
+  pretrained: false
+  seg_head_channels: 256
+  seg_out_channels: 1
+  type: curve_tiny_unet
+  upsample_mode: conv_transpose
+paths:
+  best_model_name: best_connectivity_predictor_v3.pth
+  checkpoint_dir: preprocess/checkpoints/connectivity/v3
+  flag_json: flag.json
+  image_dir: image
+  label_curve_target_dir: bridge
+  mask_dir: mask
+  root: data/dataset/CFD_v3_refine_2
+  seg_target_dir: label
+  test_data: test
+  train_data: train
+scheduler:
+  eta_min: 1.0e-06
+train:
+  best_metric: test/f1
+  device: cuda
+  epochs: 200
+  learning_rate: 0.0001
+  test_every: 5
+  weight_decay: 0.0001
+wandb:
+  project: Larva_2_preprocess

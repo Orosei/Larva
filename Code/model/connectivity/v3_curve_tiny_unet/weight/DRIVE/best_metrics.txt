@@ -1,0 +1,15 @@
+epoch	60
+best_metric	test/f1
+best_score	0.937063
+class0_acc	0.562092
+class1_acc	0.990758
+cls_loss	0.083662
+f1	0.937063
+label_curve_dice	0.240046
+label_curve_iou	0.239842
+label_curve_loss	0.947413
+loss	1.031075
+overall_acc	0.896254
+precision	0.888889
+recall	0.990758
+seg_loss	0.947413

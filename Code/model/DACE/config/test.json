@@ -1,0 +1,32 @@
+{
+  "NAME": "DACE",
+  "DATA_NAME": "inhouse",
+  "DATA_ROOT": "../data_and_weight/data/inhouse/test",
+  "OUTPUT_DIR": "../output",
+  "WEIGHTS_FILE_NAME": "../data_and_weight/model_weights/dace_model_50.pth",
+    
+  "IMAGE_IDX": -1, 
+  "POINTS_PER_IMAGE": -1,
+  "PARALLEL": true,
+  "WRITE_VIDEO":false,
+  "SHOW_GUI": true,
+
+  "DEVICE": "cuda",
+
+
+  "NUM_DIFFUSION_STEPS": 1000,
+  "INFERENCE_SEED": 42,
+  "INFERENCE_STEPS": 15,
+  "PRED_STEPS": 16,
+  "PATCH_SIZE": 64,
+  
+  "ACTION_CHUNK_SIZE": 2,
+  "EXEC_STEPS": 100,
+
+
+  "MAX_ZERO_WIDTH_STEPS": 2,
+  "USE_WIDTH": true,
+  "USE_OVERLAY": true,
+  "OVERLAY_COLOR": 0.4,
+  "OVERLAY_THICKNESS": 2
+}
